@@ -1,0 +1,477 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: white;
+    border-bottom: 1px solid rgb(86, 158, 240);
+}
+.nav-link{
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+.nav-link:hover{
+    background-color: rgb(86, 158, 240);
+    transition: 0.5s;
+}
+.navbar-brand{
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: black;
+    cursor: pointer;
+    text-decoration:none;
+}
+/* Hauptteil */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Setze die Höhe auf 100% des Viewports */
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+.main img {
+    max-height: 100%; 
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.main h3 {
+    font-size: 4.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.main h6 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    line-height: 1;
+    border-bottom: 3px solid rgb(86, 158, 240);
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Flexbox in Spalte für kleinere Bildschirme */
+        align-items: center; /* Zentriert den Inhalt vertikal */
+        padding: 50px 10px; /* Verringertes Padding für kleinere Bildschirme */
+    }
+
+    .main h3 {
+        font-size: 3rem; /* Kleinere Schriftgröße für den Titel */
+    }
+
+    .main h6 {
+        font-size: 1.2rem; /* Kleinere Schriftgröße für den Untertitel */
+    }
+
+    .main::before {
+        content: ""; /* Pseudoelement für Hintergrundbild oder -video */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+
+
+.main .btnMeineProjekte {
+    height: 55px;
+    width: 138px;
+    background-color: rgb(86, 158, 240);
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 30px; /* Platzieren Sie den Abstand nach unten */
+}
+
+.main .btnMeineProjekte:hover {
+    background-color: transparent;
+    transition: 0.5s;
+    color: rgb(86, 158, 240);
+    border: 1px solid rgb(86, 158, 240);
+}
+
+.main .btnMichEinstellen {
+    height: 55px;
+    width: 138px;
+    background-color: transparent;
+    color: rgb(86, 158, 240);
+    outline: none;
+    border: 1px solid rgb(86, 158, 240);
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px; /* Platzieren Sie den Abstand nach unten */
+}
+
+.main .btnMichEinstellen:hover {
+    background-color: rgb(86, 158, 240);
+    transition: 0.5s;
+    color: white;
+}
+
+/* Über mich*/
+
+.about img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-height: 100%;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+/* Progressbar*/
+
+.progress{
+    background-color: rgb(223, 219, 219);
+    justify-content: flex-start;
+    border-radius: 50px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 25px;
+    width: 100%;
+
+    -webkit-box-shadow: inset 1px -3px 176px -97px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 1px -3px 176px -97px rgba(0,0,0,0.75);
+    box-shadow: inset 1px -3px 176px -97px rgba(0,0,0,0.75);
+}
+
+.pro-HTMLCSS{
+    animation: load1 1s normal forwards;
+    border-radius: 50px;
+    background-color: rgb(86, 158, 240);
+    height: 25px;
+    width: 0;
+}
+
+.pro-CSHARP{
+    animation: load2 1s normal forwards;
+    border-radius: 50px;
+    background-color: rgb(86, 158, 240);;
+    height: 25px;
+    width: 0;
+}
+
+.pro-SQL{
+    animation: load3 1s normal forwards;
+    border-radius: 50px;
+    background-color:rgb(86, 158, 240);;
+    height: 25px;
+    width: 0;
+}
+
+.pro-PYTHON{
+    animation: load4 1s normal forwards;
+    border-radius: 50px;
+    background-color: rgb(86, 158, 240);;
+    height: 25px;
+    width: 0;
+}
+
+.progress p{
+    color: black;
+    padding: 12px;
+}
+
+@keyframes load1{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 20%;
+    }  
+}
+
+@keyframes load2{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 60%;
+    }  
+}
+
+@keyframes load3{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 70%;
+    }  
+}
+
+@keyframes load4{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 50%;
+    }  
+}
+
+.btnLebenslaufHerunterrladen{
+    height: 40px;
+    width: 200px;
+    outline: none;
+    border: none;
+    background-color: rgb(86, 158, 240);
+    color: black;
+    border-radius: 4px;
+}
+
+.btnLebenslaufHerunterrladen:hover{
+    background-color: transparent;
+    color: black;
+    border: 1px solid rgb(86, 158, 240);
+    transition: 0.5s;
+}
+
+.btnKonatkierMich{
+    height: 40px;
+    width: 145px;
+    outline: none;
+    border: 1px solid rgb(86, 158, 240); ;
+    background-color: transparent;
+    color: black;
+    border-radius: 4px;
+}
+
+.btnKonatkierMich:hover{
+    background-color: rgb(86, 158, 240);
+    color: black;
+    border: none;
+    transition: 0.5s;
+}
+
+/* Merine Fähigkeiten  und Projekte*/
+
+.karte {
+    border: none;
+    outline: none;
+    width: 100%;
+    max-width: 400px;
+    -webkit-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    -moz-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    margin: 0 auto;
+}
+
+.karte-Projekte {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    -webkit-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    -moz-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.karte-Projekte {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    -webkit-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    -moz-box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    box-shadow: -8px 6px 89px -65px rgba(0,0,0,0.75);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.karte-Projekte .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 200px;
+    object-fit: cover; 
+}
+
+.karte-Projekte .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.karte-Projekte .card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.karte-Projekte .card-text {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.karte-Projekte .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, border-color 0.3s;
+    align-self: center;
+}
+
+.karte-Projekte .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+.karte p {
+    color: gray;
+}
+
+.kreis {
+    height: 70px;
+    width: 70px;
+    background-color: rgb(86, 158, 240);
+    color: black;
+    padding: 12px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.karte:hover .kreis {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+.karten-koerper {
+    padding: 15px; /* Padding inside each card */
+}
+
+.row > [class*='col-'] {
+    margin-bottom: 20px; /* Add margin to bottom of columns for spacing */
+}
+
+/*Kontakz*/
+
+.kontakt .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+  
+  .kreis {
+    height: 70px;
+    width: 70px;
+    background-color: rgb(86, 158, 240);
+    color: white;
+    padding: 12px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .kreis i {
+    font-size: 30px;
+  }
+  
+  .kreis:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+  }
+  
+  .kontakt h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  
+  .kontakt p {
+    font-size: 1rem;
+    color: gray;
+  }
+
+  .reihe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-control.bg-light {
+    background-color: #f8f9fa;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .btnNachrichtAbschicken {
+    height: 40px;
+    width: 200px;
+    outline: none;
+    border: none;
+    background-color: rgb(86, 158, 240);
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btnNachrichtAbschicken:hover {
+    background-color: transparent;
+    color: rgb(86, 158, 240);
+    border: 1px solid rgb(86, 158, 240);
+    transition: 0.5s;
+  }
+  
+  
